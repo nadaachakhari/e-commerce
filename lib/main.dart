@@ -1,3 +1,4 @@
+import 'package:e_commerce/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,7 +11,10 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(),
+      themeMode: ThemeMode.system,
+      //appel de fonction de la class TAppTheme
+      theme: TAppTheme.lightTheme,//light theme
+      darkTheme: TAppTheme.darkTheme//dark theme
     );
   }
 }
